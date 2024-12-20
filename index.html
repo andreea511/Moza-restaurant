@@ -121,7 +121,6 @@
                 width: 100%;
                 height: auto;
                 border-radius: 15px;
-                /* Colțuri rotunjite */
                 box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
                 transition: transform 0.3s ease, box-shadow 0.3s ease;
             }
@@ -141,34 +140,21 @@
 
             .poza-echipa img {
                 width: 100%;
-                /* Imaginea va ocupa 100% din lățimea containerului */
                 height: 100%;
-                /* Imaginea va avea aceeași înălțime ca și containerul */
                 object-fit: cover;
-                /* Asigură că imaginea se va potrivi corespunzător, fără a se deforma */
             }
 
             .text-poza {
                 position: absolute;
-                /* Poziționează textul deasupra imaginii */
                 top: 50%;
-                /* Aliniază textul vertical la mijloc */
                 left: 50%;
-                /* Aliniază textul orizontal la mijloc */
                 transform: translate(-50%, -50%);
-                /* Centrează textul complet */
                 color: #fff;
-                /* Text alb pentru a fi vizibil pe imagine */
                 text-align: center;
-                /* Centrează textul */
                 background-color: rgba(0, 0, 0, 0.5);
-                /* Fundal semitransparent pentru text */
                 padding: 20px;
-                /* Spațiu între text și margini */
                 border-radius: 10px;
-                /* Colțuri rotunjite pentru text */
                 max-width: 80%;
-                /* Oferă o lățime maximă textului pentru a nu ieși din imagine */
             }
 
             .text-poza {
@@ -227,11 +213,11 @@
                     </div>
                 </div>
             </nav>
+        </header>
 
 
 
-
-            <header>
+           
                 <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
                     <div class="carousel-indicators">
                         <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
@@ -275,7 +261,7 @@
                         <span class="visually-hidden">Next</span>
                     </button>
                 </div>
-                </div>
+                
             </header>
 
         
@@ -311,7 +297,8 @@
                         <img src="familia.jpg" alt="poză alb-negru cu o familie numeroasă">
                 </section>
             </div>
-
+    </div>
+        
 <h2>Meniuri</h2>
             <section id="Meniuri">
 
@@ -322,7 +309,7 @@
                     <div class="meniu ">
                         <div class="card" style="width: 18rem;">
 
-                            <ul class="list-group list-group-flush">
+                            
                                 <img src="carne.jpg" class="card-img-top"
                                     alt="o porție de carne cu legume pe o farfurie albă">
                                 <div class="card-body">
@@ -332,6 +319,7 @@
                                         </p>
                                     </div>
                                 </div>
+                            <ul class="list-group list-group-flush">
                                 <li class="list-group-item">Mâncare vegană</li>
                                 <li class="list-group-item"> Lasagna și paste</li>
                                 <li class="list-group-item">Preparate din carne de pui</li>
@@ -346,7 +334,7 @@
                     <div class="meniu">
 
                         <div class="card" style="width: 18rem;">
-                            <ul class="list-group list-group-flush">
+                            
                                 <img src="cocktail.jpg" class="card-img-top"
                                     alt="prepararea unui cocktail roz, pe aceeași masă aflându-se încă 2 cocktail-uri">
                                 <div class="card-body">
@@ -356,6 +344,7 @@
                                             pentru o seară în oraș.</p>
                                     </div>
                                 </div>
+                            <ul class="list-group list-group-flush">
                                 <li class="list-group-item">Cafea</li>
                                 <li class="list-group-item"> Ceai</li>
                                 <li class="list-group-item">Cocktail-uri fără alcool</li>
@@ -369,7 +358,7 @@
                     <div class="meniu">
 
                         <div class="card" style="width: 18rem;">
-                            <ul class="list-group list-group-flush">
+                           
                                 <img src="clatite.jpg" class="card-img-top" alt="un turn de clătite">
                                 <div class="card-body">
                                     <div class="card-text">
@@ -377,6 +366,7 @@
                                         <p>Surprizele dulci sunt mereu aici.</p>
                                     </div>
                                 </div>
+                            <ul class="list-group list-group-flush">
                                 <li class="list-group-item">Lavacake</li>
                                 <li class="list-group-item"> Cheesecake</li>
                                 <li class="list-group-item">Tiramisu</li>
@@ -543,7 +533,7 @@
         <p>Organizează-ți evenimentul cu noi! Contactează-ne pentru opțiuni personalizate.</p>
     </div>
 </div>
-</selection>
+</section>
 
                   
 <footer class="footer bg-dark text-white py-5">
@@ -551,14 +541,14 @@
         <div class="row">
           
             <div class="col-md-4 mb-4">
-                <h5>Contact</h5>
+                <h2>Contact</h2>
                 <p><strong>Adresă:</strong> Strada Moza, Nr. 123, Cluj-Napoca, România</p>
                 <p><strong>Telefon:</strong> +40 123 456 789</p>
                 <p><strong>Email:</strong> contact@moza.ro</p>
             </div>
 
             <div class="col-md-4 mb-4 text-center">
-                <h3>Urmărește-ne</h3>
+                <h2>Urmărește-ne</h2>
                 
                     <p><a href="https://facebook.com"  target="_blank">Facebook</a></p>
                   
