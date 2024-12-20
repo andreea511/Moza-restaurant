@@ -1,0 +1,592 @@
+<DOCTYPE html>
+
+    <html lang="ro">
+
+    <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Parkinsans:wght@300..800&display=swap" rel="stylesheet">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>Restaurantul Moza</title>
+        <meta charset="utf-8">
+        <meta name="author" content="Andreea Petrișor">
+        <meta name="keywords" content="Restaurant, Mâncare, Pizza, Deserturi">
+        <meta name="description"
+            content="Restaurantul nostru oferă o experiență culinară de neuitat, combinând rețete tradiționale 
+    cu preparate inovative, pregătite cu ingrediente proaspete și de calitate superioară.
+     Atmosfera elegantă și serviciul impecabil creează un cadru perfect pentru orice ocazie specială sau o simplă seară de relaxare.">
+
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+            integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+
+        <style>
+            .logo {
+                height: 50px
+            }
+
+            .cards-container {
+                display: flex;
+                justify-content: center;
+                flex-wrap: wrap;
+                background-color: #440e0e;
+                border-radius: 8px;
+                box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+                color: #fff;
+                margin: 10px;
+                padding: 40px;
+
+            }
+
+            .card {
+                background-color: #440e0e;
+                border-radius: 8px;
+                box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+                width: 20%;
+                padding: 20px;
+                margin: 50px;;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+
+            .centrat {
+                max-width: 100%;
+                height: auto;
+            }
+
+            .carousel-item {
+                width: 100%;
+                height: 500px;
+                object-fit: contain;
+            }
+
+            h1 {
+                text-align: center;
+                text-shadow: 2px 2px 5px rgb(176, 117, 117);
+                text-decoration: double;
+                top: 50%;
+                left: 50%;
+                color: rgb(42, 6, 6);
+            }
+
+            h2 {
+                text-decoration: double;
+                text-shadow: 6px 7px 5px rgb(95, 63, 63);
+                padding: 20px;
+
+            }
+
+            h3 {
+                text-align: center;
+                text-shadow: 2px 2px 5px rgb(96, 41, 41);
+                margin: 10px;
+
+                color: rgb(218, 218, 218);
+                
+                
+
+            }
+
+            .meniu {
+
+                display: flex;
+                justify-content: center;
+
+                background-color: #8d878785;
+                border-radius: 8px;
+                box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+                color: #fff;
+                margin: 60px;
+            }
+
+            .card-text {
+                text-shadow: 2px 2px 5px rgb(96, 41, 41);
+                margin: 10px;
+                color: rgb(209, 209, 209);
+
+            }
+
+
+
+            .gallery {
+                margin-top: 30px;
+            }
+
+            .gallery img {
+                width: 100%;
+                height: auto;
+                border-radius: 15px;
+                /* Colțuri rotunjite */
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                transition: transform 0.3s ease, box-shadow 0.3s ease;
+            }
+
+            .gallery img:hover {
+                transform: scale(1.1);
+                box-shadow: 0 6px 12px rgba(172, 149, 149, 0.2);
+            }
+
+            .poza-echipa {
+                position: relative;
+                width: 100%;
+                height: 300px;
+                overflow: hidden;
+               
+            }
+
+            .poza-echipa img {
+                width: 100%;
+                /* Imaginea va ocupa 100% din lățimea containerului */
+                height: 100%;
+                /* Imaginea va avea aceeași înălțime ca și containerul */
+                object-fit: cover;
+                /* Asigură că imaginea se va potrivi corespunzător, fără a se deforma */
+            }
+
+            .text-poza {
+                position: absolute;
+                /* Poziționează textul deasupra imaginii */
+                top: 50%;
+                /* Aliniază textul vertical la mijloc */
+                left: 50%;
+                /* Aliniază textul orizontal la mijloc */
+                transform: translate(-50%, -50%);
+                /* Centrează textul complet */
+                color: #fff;
+                /* Text alb pentru a fi vizibil pe imagine */
+                text-align: center;
+                /* Centrează textul */
+                background-color: rgba(0, 0, 0, 0.5);
+                /* Fundal semitransparent pentru text */
+                padding: 20px;
+                /* Spațiu între text și margini */
+                border-radius: 10px;
+                /* Colțuri rotunjite pentru text */
+                max-width: 80%;
+                /* Oferă o lățime maximă textului pentru a nu ieși din imagine */
+            }
+
+            .text-poza {
+                text-align: center;
+                text-shadow: 2px 2px 5px rgb(176, 117, 117);
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                color: rgb(209, 196, 196);
+            }
+            .chenar{
+   
+   border-color: rgb(33, 33, 55);
+   border-style: solid;
+   
+   outline: thick double;
+   background-color: rgb(182, 168, 168);
+   margin: 10px;
+   padding: 7px;
+   }
+        </style>
+
+
+
+    </head>
+
+    <body>
+        <header>
+            <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top">
+                <div class="container-fluid">
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false"
+                        aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="center">
+                        <a class="navbar-brand" href="index.html"><img class="logo" src="logo.png"
+                                alt="ilustrație simplă, cu 3 boabe de cafea"></a>
+                        <a class="navbar-brand" href="#Moza">Moza</a>
+                    </div>
+                    <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                            <li class="nav-item">
+                                <a class="nav-link" href="#Despre noi">Despre noi</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#Meniuri">Meniuri</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#Echipa noastră">Echipa noastră</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#Contact">Contact</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+
+
+
+
+            <header>
+                <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
+                            class="active" aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                            aria-label="Slide 2"></button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                            aria-label="Slide 3"></button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3"
+                            aria-label="Slide 4"></button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4"
+                            aria-label="Slide 5"></button>
+                    </div>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="pub.jpg" class="d-block w-100" alt="interiorul unui restaurant">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="cafea.jpg" class="d-block w-100"
+                                alt="prepararea unei cafele de către o barmaniță">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="sushi.jpg" class="d-block w-100" alt="mai multe porții de sushi">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="interior.jpg" class="d-block w-100"
+                                alt="interiorul unui restaurant și un domn bucătar care găteste">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="cheesecake.jpg" class="d-block w-100" alt="un cheesecake pe o farfurie albă">
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+                        data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+                        data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+                </div>
+            </header>
+
+        
+                <h1>Restaurantul Moza</h1>
+
+
+                <section id="Despre noi">
+                    <div class="cards-container  row row-cols-1 row-cols-md-3 g-4">
+
+                        <h2>Despre noi</h2>
+
+                        <p>
+
+                            Moza este mai mult decât un restaurant – este un loc unde tradiția întâlnește inovația, iar
+                            fiecare masă
+                            devine o poveste. Fondat în urmă cu 30 ani din dorința de a aduce un nou suflu în peisajul
+                            culinar al
+                            Cluj, Moza a început ca o mică afacere de familie, bazată pe respectul pentru ingrediente de
+                            calitate și
+                            dragostea pentru mâncarea autentică.
+                        </p>
+                        <p>
+                            De la începuturile sale, am dorit ca Moza să fie un loc special, unde fiecare vizită să fie
+                            o experiență
+                            memorabilă. Așa că am început cu o idee simplă: să creăm un meniu care să îmbine influențele
+                            gastronomice din întreaga lume cu tradițiile locale, oferind atât preparate clasice, cât și
+                            reinterpretări moderne ale unor rețete bine-cunoscute.
+
+                            În timp, Moza a crescut și s-a transformat într-un loc de întâlnire al celor care apreciază
+                            nu doar
+                            mâncarea bună, dar și atmosfera primitoare și serviciul impecabil.</p>
+
+                        <img src="familia.jpg" alt="poză alb-negru cu o familie numeroasă">
+                </section>
+            </div>
+
+<h2>Meniuri</h2>
+            <section id="Meniuri">
+
+                <div class="meniu  row row-cols-1 row-cols-md-3 g-4 ">
+
+                    
+
+                    <div class="meniu ">
+                        <div class="card" style="width: 18rem;">
+
+                            <ul class="list-group list-group-flush">
+                                <img src="carne.jpg" class="card-img-top"
+                                    alt="o porție de carne cu legume pe o farfurie albă">
+                                <div class="card-body">
+                                    <div class="card-text">
+                                        <h3> Mâncare <span class="badge text-bg-secondary"></span></h3>
+                                        <p >O diversitate de preparate perfecte pentru toate gusturile.
+                                        </p>
+                                    </div>
+                                </div>
+                                <li class="list-group-item">Mâncare vegană</li>
+                                <li class="list-group-item"> Lasagna și paste</li>
+                                <li class="list-group-item">Preparate din carne de pui</li>
+                                <li class="list-group-item">Preparate din pește</li>
+                                <li class="list-group-item">Pizza și hamburgeri</li>
+                                <li class="list-group-item">Preparate fără gluten</li>
+                            </ul>
+                        </div>
+                    </div>
+
+
+                    <div class="meniu">
+
+                        <div class="card" style="width: 18rem;">
+                            <ul class="list-group list-group-flush">
+                                <img src="cocktail.jpg" class="card-img-top"
+                                    alt="prepararea unui cocktail roz, pe aceeași masă aflându-se încă 2 cocktail-uri">
+                                <div class="card-body">
+                                    <div class="card-text">
+                                        <h3> Băuturi <span class="badge text-bg-secondary"></span></h3>
+                                        <p>Câteva dintre băuturile pe care le găsiți la noi,perfecte
+                                            pentru o seară în oraș.</p>
+                                    </div>
+                                </div>
+                                <li class="list-group-item">Cafea</li>
+                                <li class="list-group-item"> Ceai</li>
+                                <li class="list-group-item">Cocktail-uri fără alcool</li>
+                                <li class="list-group-item">Cocktail-uri cu alcool</li>
+                                <li class="list-group-item">Shots</li>
+                                <li class="list-group-item">Sucuri</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="meniu">
+
+                        <div class="card" style="width: 18rem;">
+                            <ul class="list-group list-group-flush">
+                                <img src="clatite.jpg" class="card-img-top" alt="un turn de clătite">
+                                <div class="card-body">
+                                    <div class="card-text">
+                                        <h3> Deserturi <span class="badge text-bg-secondary">New</span></h3>
+                                        <p>Surprizele dulci sunt mereu aici.</p>
+                                    </div>
+                                </div>
+                                <li class="list-group-item">Lavacake</li>
+                                <li class="list-group-item"> Cheesecake</li>
+                                <li class="list-group-item">Tiramisu</li>
+                                <li class="list-group-item">Profiterol</li>
+                                <li class="list-group-item">Tort cu morcovi</li>
+                                <li class="list-group-item">Prăjitura casei</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            </div>
+
+
+
+                <div class="container">
+                    <div class="row">
+
+                        <div class="col-md-6 mb-4 gallery">
+                            <div class="row">
+                                <div class="col-md-6 mb-4">
+                                    <img src="paste.jpg" class="img-fluid rounded" alt="o porție de paste Fusili">
+                                    <div class="text-center">
+                                        <p><strong>Paste Fusili</strong></p>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 mb-4">
+                                    <img src="bauturi.jpg" class="img-fluid rounded" alt="3 pahare de hugo">
+                                    <div class="text-center">
+                                        <p><strong>Hugo</strong></p>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 mb-4">
+                                    <img src="bucatar.jpg" class="img-fluid rounded"
+                                        alt="un bucătar în bucătaria unui restaurant">
+                                    <div class="text-center">
+                                        <p><strong>Bucătaria noastră</strong></p>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 mb-4">
+                                    <img src="prajiturix.jpg" class="img-fluid rounded"
+                                        alt="o prăjitură cu glazura albă cu cocos">
+                                    <div class="text-center">
+                                        <p><strong>Prăjitură cu cocos</strong></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="col-md-6 ">
+                            <h2>Sustenabilitate și Ingredientele Noastre </h2>
+
+                            <p>
+                                La Moza, avem un angajament ferm față de sustenabilitate.
+                                Folosim ingrediente locale și de sezon, susținând micii producători din regiune și
+                                asigurându-ne că preparatele noastre sunt nu doar delicioase,
+                                dar și prietenoase cu mediul. Mâncarea noastră este gătită cu dragoste, dar și cu
+                                respect față de natură.</p>
+                            <div class="col-md-6">
+                                <h2>Lista de Alergeni</h2>
+                                <ul>
+                                    <li>Gluten (din grâu, secară, orz, ovăz, etc.)</li>
+                                    <li>Crustacee (ex. creveți, homari, crabi)</li>
+                                    <li>Ouă</li>
+                                    <li>Pește</li>
+                                    <li>Arahide</li>
+                                    <li>Soia</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                    </div>
+
+                    <div class="row">
+                    <section id="Echipa noastră">
+                    <div class="poza-echipa">
+                        <img src="pug.jpg" class="img-fluid" alt="un cățel pug care stă pe un scaun">
+                        <div class="text-poza">
+                            <h2>Avem plăcerea să vă prezentăm echipa noastră!!</h2>
+                            <p> Suntem extrem de mândri de echipa noastră, care joacă un rol esențial în succesul
+                                restaurantului nostru.
+                                Fiecare membru al echipei, de la bucătari până la personalul de servire, contribuie cu
+                                dedicare și profesionalism pentru a oferi o experiență culinară impecabilă fiecărui
+                                client.
+                                Suntem recunoscători pentru pasiunea și efortul lor constant și pentru faptul că,
+                                împreună, reușim să aducem la viață viziunea noastră despre ospitalitate de top.
+                            </p>
+                        </div>
+                    </div>
+
+                    
+                        <h2 class="text-center mb-4">Echipa Noastră</h2>
+                        
+                           
+                          <div class="meniu  row row-cols-1 row-cols-md-3 g-4">
+                                <div class="card">
+                                    
+                                    <img src="sefu.jpg" class="card-img-top" alt="Andrei Ionescu, un om îmbrăcat la costum și patronul restaurantului">
+                                    <div class="meniu ">
+                                        <h3>Andrei Ionescu</h3>
+                                        <p class="card-text">Patronul restaurantului Moza, Andrei Ionescu, este un
+                                            pasionat de gastronomie cu o viziune unică asupra industriei culinare. După
+                                            ce a lucrat în restaurante din întreaga lume, Andrei s-a întors în orașul
+                                            natal pentru a crea un loc unde tradiția și inovația se întâlnesc. Își
+                                            dedică întreaga energie pentru a oferi oaspeților o experiență culinară
+                                            autentică.</p>
+                                    </div>
+                    
+                            </div>
+
+                          
+                            
+                                <div class="card">
+                                    <img src="doamna.jpg" class="card-img-top" alt="Ana Ionescu, o doamnă îmbrăcată într-un costum tradițional">
+                                    <div class="meniu ">
+                                        <h3>Ana Ionescu</h3>
+                                        <p class="card-text">Chef Ana Ionescu este inima culinară a restaurantului Moza.
+                                            Cu o pasiune deosebită pentru gătit, Ana combină tradițiile culinare ale
+                                            familiei cu tehnici moderne, creând preparate autentice și inovative. Sub
+                                            îndrumarea ei, echipa din bucătărie oferă o experiență culinară memorabilă,
+                                            plină de rafinament și respect pentru gusturile locale.</p>
+                                    </div>
+
+                                </div>
+                           
+
+                          
+                            
+                                <div class="card">
+                                    <img src="baiatt.jpg" class="card-img-top" alt="David Ionescu, un băiat tânăr care zâmbește">
+                                    <div class="meniu ">
+                                        <h3>David Ionescu</h3>
+                                        <p class="card-text">Chef David Ionescu, fiul Anei Ionescu, aduce un suflu
+                                            tineresc și o abordare modernă în bucătărie. După ce a studiat la școli
+                                            culinare renumite, David continuă tradiția familiei, creând preparate ce
+                                            îmbină tehnicile clasice cu influențele gastronomice contemporane, pentru o
+                                            experiență culinară inovativă.</p>
+                                    </div>
+                                </div>
+                          
+                        </div> </div>
+                   </section>
+
+                   <section id="Contact">
+                   <h2> Contact si rezervări</h2>
+
+    <div class="chenar">
+        <h3>Rezervări Online</h3>
+        <p>Rezervați rapid direct pe site alegând data, ora și numărul de persoane. Confirmare instantanee.</p>
+    </div>
+    <div class="chenar">
+        <h3>Rezervări Telefonice</h3>
+        <p>Sunați la [număr de telefon] pentru rezervări directe. Echipa noastră vă va ajuta cu detaliile.</p>
+    </div>
+    <div class="chenar">
+        <h3>Politica de Anulare</h3>
+        <p>Anulați cu cel puțin 24 de ore înainte. Ne ajută să oferim locul altor oaspeți.</p>
+    </div>
+    <div class="chenar">
+        <h3>Evenimente Speciale</h3>
+        <p>Organizează-ți evenimentul cu noi! Contactează-ne pentru opțiuni personalizate.</p>
+    </div>
+</div>
+</selection>
+
+                  
+<footer class="footer bg-dark text-white py-5">
+    <div class="container">
+        <div class="row">
+          
+            <div class="col-md-4 mb-4">
+                <h5>Contact</h5>
+                <p><strong>Adresă:</strong> Strada Moza, Nr. 123, Cluj-Napoca, România</p>
+                <p><strong>Telefon:</strong> +40 123 456 789</p>
+                <p><strong>Email:</strong> contact@moza.ro</p>
+            </div>
+
+            <div class="col-md-4 mb-4 text-center">
+                <h3>Urmărește-ne</h3>
+                
+                    <p><a href="https://facebook.com"  target="_blank">Facebook</a></p>
+                  
+                    <p><a href="https://instagram.com" target="_blank">Instagram</a></p>
+                    
+               
+          
+        
+            </div>
+
+            <div class="col-md-4 mb-4 text-center">
+                <h2>Locația Noastră</h2>
+                <p>Restaurantul Moza se află în centrul Clujului, într-o locație ușor accesibilă, aproape de zonele centrale ale orașului.</p>
+            </div>
+        </div>
+
+        <div class="text-center mt-4">
+            <p>&copy; 2024 Restaurant Moza. Toate drepturile rezervate.</p>
+        </div>
+    </div>
+</footer>
+
+
+
+
+                    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+                        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+                        crossorigin="anonymous"></script>
+    </body>
+
+    </html>
